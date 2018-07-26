@@ -42,7 +42,7 @@ def view_incomplete_task(request):
     except Exception as e:
         raise e    
 @csrf_exempt
-def delete(request, id):
+def delete_task(request, id):
    delpost = TaskModel.objects.get(pk = id)
    delpost.delete()
    
